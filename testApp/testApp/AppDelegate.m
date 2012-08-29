@@ -68,17 +68,13 @@
         x++;
     }
     
-    // nested while loop. performs outside loop once then goes through the inner loop 10 times before incrementing
-    // the outside loop 1 times.
-    int p = 0;
-    while (p < 10) {
-        NSLog(@"variable p = %d", p);
-        p++;
+    // nested loop
+    for(int a = 0; a < 5; a++){
+        NSLog(@"variable a = %d", a);
         
-        int q = 0;
-        while (q < 10) {
-            NSLog(@"variable q = %d", q);
-            q++;
+        // inner loop
+        for(int l = 0; l < 5; l++){
+            NSLog(@"variable x = %d", l);
         }
     }
     
