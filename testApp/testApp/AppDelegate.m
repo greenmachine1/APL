@@ -21,8 +21,9 @@
     
     // declaring my variables
     float number = 10.01f;
-    int anotherNumber = 23;
     float yetAnotheNumber = 78.90f;
+    int anotherNumber = 23;
+    
     BOOL thisIsEitherYesOrNo = YES;
     
     
@@ -53,8 +54,17 @@
         NSLog(@"This is false...");
     }
     
+    // using a for loop to loop through an NSLog output 10 times.
+    for(int i = 0; i < 10; i++){
+        NSLog(@"hellooooooooo.....");
+    }
     
-    
+    // using a while loop
+    int x = 0;
+    while (x < 10) {
+        NSLog(@"This is inside a while loop");
+        x++;
+    }
     
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
