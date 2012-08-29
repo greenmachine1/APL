@@ -24,6 +24,7 @@
     float yetAnotheNumber = 78.90f;
     int anotherNumber = 23;
     
+    // declaring boolean type
     BOOL thisIsEitherYesOrNo = YES;
     
     
@@ -63,7 +64,22 @@
     int x = 0;
     while (x < 10) {
         NSLog(@"This is inside a while loop");
+        // integer x is incremented 1 time each time the loop goes through.
         x++;
+    }
+    
+    // nested while loop. performs outside loop once then goes through the inner loop 10 times before incrementing
+    // the outside loop 1 times.
+    int p = 0;
+    while (p < 10) {
+        NSLog(@"variable p = %d", p);
+        p++;
+        
+        int q = 0;
+        while (q < 10) {
+            NSLog(@"variable q = %d", q);
+            q++;
+        }
     }
     
     
