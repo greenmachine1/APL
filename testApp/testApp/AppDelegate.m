@@ -19,41 +19,42 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    // declaring my variables
+//<-------------------------------------start of program-------------------------------------------->
+    
+// declaring my variables
     float number = 10.01f;
     float yetAnotherNumber = 78.90f;
     int anotherNumber = 23;
     
-    // declaring boolean type
+// declaring boolean type
     BOOL thisIsEitherYesOrNo = YES;
     
-    
-    // this outputs the value of number with 2 decimal places(%.2f)
+// this outputs the value of number with 2 decimal places(%.2f)
     NSLog(@"Here is the value of number represented as a float : %.2f", number);
     
-    // casting the number float into a integer value (int)number
+// casting the number float into a integer value (int)number
     NSLog(@"Here is the value of number represented as an integer : %d", (int)number);
     
     
-    // using if, else if, and else statements as well as boolean logic
+// using if, else if, and else statements as well as boolean logic
     
-    if ((anotherNumber == 23) && (yetAnotherNumber == 78.90f)){
+    if ((anotherNumber != 23) && (yetAnotherNumber == 78.90f)){
         NSLog(@"The two number values are correct");
     }
-    else if((anotherNumber > 23) || (yetAnotherNumber > 78.90f)){
+    else if((anotherNumber > 23) || (yetAnotherNumber < 78.90f)){
         NSLog(@"Both numbers are higher than they need to be");
     }
-    else{
-        NSLog(@"Both numbers are lower than they should be");
+    else if((anotherNumber == 23) && (thisIsEitherYesOrNo == YES)){
+        NSLog(@"The anotherNumber variable is 23 and thisIsEitherYesOrNo is YES");
     }
     
     
-    // using a for loop to loop through an NSLog output 10 times.
+// using a for loop to loop through an NSLog output 10 times.
     for(int i = 0; i < 10; i++){
         NSLog(@"hellooooooooo.....");
     }
     
-    // using a while loop
+// using a while loop
     int x = 0;
     while (x < 10) {
         NSLog(@"This is inside a while loop");
@@ -61,7 +62,7 @@
         x++;
     }
     
-    // nested loop
+// nested loop
     for(int a = 0; a < 5; a++){
         NSLog(@"variable a = %d", a);
         
@@ -70,7 +71,7 @@
             NSLog(@"variable x = %d", l);
         }
     }
-    
+//<--------------------------------------------- end -------------------------------------------------->
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
