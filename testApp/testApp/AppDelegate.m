@@ -19,9 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    // declaring a float integer
+    // declaring my variables
     float number = 10.01f;
-    
     int anotherNumber = 23;
     float yetAnotheNumber = 78.90f;
     BOOL thisIsEitherYesOrNo = YES;
