@@ -18,10 +18,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    float number = 10.01f;
     
+    // this outputs the value of number with 2 decimal places
+    NSLog(@"Here is the value of number represented as a float : %.2f", number);
     
-    NSLog(@"Testing out my github savability");
-    
+    // casting the number float into a integer value
+    NSLog(@"Here is the value of number represented as an integer : %d", (int)number);
     
     
     
