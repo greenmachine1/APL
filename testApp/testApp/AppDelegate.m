@@ -21,39 +21,32 @@
     
     // declaring my variables
     float number = 10.01f;
-    float yetAnotheNumber = 78.90f;
+    float yetAnotherNumber = 78.90f;
     int anotherNumber = 23;
     
     // declaring boolean type
     BOOL thisIsEitherYesOrNo = YES;
     
     
-    // this outputs the value of number with 2 decimal places
+    // this outputs the value of number with 2 decimal places(%.2f)
     NSLog(@"Here is the value of number represented as a float : %.2f", number);
     
-    // casting the number float into a integer value
+    // casting the number float into a integer value (int)number
     NSLog(@"Here is the value of number represented as an integer : %d", (int)number);
     
     
-    // proving my mastery in boolean statements!
+    // using if, else if, and else statements as well as boolean logic
     
-    // if statement goes like this :
-    // if anotherNumber does not equal 23 or yetAnotherNumber does not equal 78.90 then output both numbers are wrong
-    if((anotherNumber != 23) || (yetAnotheNumber != 78.90f)){
-        NSLog(@"Both numbers are wrong");
+    if ((anotherNumber == 23) && (yetAnotherNumber == 78.90f)){
+        NSLog(@"The two number values are correct");
+    }
+    else if((anotherNumber > 23) || (yetAnotherNumber > 78.90f)){
+        NSLog(@"Both numbers are higher than they need to be");
     }
     else{
-        NSLog(@"Both numbers are correct");
+        NSLog(@"Both numbers are lower than they should be");
     }
     
-    // if statement goes like this:
-    // if anotherNumber does equal 23 and thisIsEitherYesOrNo does equal YES then output text
-    if((anotherNumber == 23) && (thisIsEitherYesOrNo == YES)){
-        NSLog(@"Another number does equal 23 and this is either yes or no is in fact yes");
-    }
-    else{
-        NSLog(@"This is false...");
-    }
     
     // using a for loop to loop through an NSLog output 10 times.
     for(int i = 0; i < 10; i++){
