@@ -32,6 +32,8 @@
     
     int numberOfDaysWorthOfPills = dogPills / 2;
     
+    float amountOfCatFood = 0.33f;
+    
     // explaining my dog situation
     NSLog(@"My wife and I have an assortment of animals.  We have %d dogs and %d cats.", numberOfDogs, numberOfCats);
     NSLog(@"Every morning whenI wake up, I have to feed my dog Trouble.");
@@ -47,8 +49,21 @@
         NSLog(@"I have enough for a weeks worth of pills for Trouble.");
     }
     else{
-        NSLog(@"I have ran out of pills!  I have to restock them!");
+        NSLog(@"I have ran out of pills!  I have to get more!");
     }
+    
+    NSLog(@"Our cats only eat at night, the amount of food I give them is %f of one full bowl.", amountOfCatFood);
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 /*
     
 // declaring my variables
