@@ -32,6 +32,7 @@
     int numberOfDaysWorthOfPills = dogPills / 2;
     
     float amountOfMoneyWeHave = 2690.90f;
+    
     BOOL myVote = YES;
     
 // explaining my dog situation
