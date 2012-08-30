@@ -19,9 +19,37 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
+    
 //<------------------------------------- Main start of program-------------------------------------------->
     
 // need to come up with a story for all of this info
+// come home from work and feed my dogs and cats
+    
+    // declaring my variables
+    int numberOfCats = 3;
+    int numberOfDogs = 2;
+    int dogPills = 120;
+    
+    int numberOfDaysWorthOfPills = dogPills / 2;
+    
+    // explaining my dog situation
+    NSLog(@"My wife and I have an assortment of animals.  We have %d dogs and %d cats.", numberOfDogs, numberOfCats);
+    NSLog(@"Every morning whenI wake up, I have to feed my dog Trouble.");
+    NSLog(@"He suffers from seizures so I have to feed him a pill to help relieve the symptoms of that.");
+    NSLog(@"So, I have to check his pills every morning to make sure he has enough.");
+    NSLog(@"He takes 2 a day and according to the remaining supply, he has enough for %d days", numberOfDaysWorthOfPills);
+    
+    // what to do if I run out of pills
+    if (dogPills == 2){
+        NSLog(@"I currently have enough pills for another day for my dog.");
+    }
+    else if (dogPills > 14){
+        NSLog(@"I have enough for a weeks worth of pills for Trouble.");
+    }
+    else{
+        NSLog(@"I have ran out of pills!  I have to restock them!");
+    }
+/*
     
 // declaring my variables
     float number = 10.01f;
@@ -73,6 +101,7 @@
             NSLog(@"variable x = %d", l);
         }
     }
+ */
 //<--------------------------------------------- end -------------------------------------------------->
     
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
@@ -80,6 +109,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
+  
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
