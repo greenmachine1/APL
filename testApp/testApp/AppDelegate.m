@@ -19,7 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-//<-------------------------------------start of program-------------------------------------------->
+//<------------------------------------- Main start of program-------------------------------------------->
+    
+// need to come up with a story for all of this info
     
 // declaring my variables
     float number = 10.01f;
