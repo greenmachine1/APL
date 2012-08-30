@@ -43,7 +43,7 @@
     NSLog(@"He takes 2 a day and according to the remaining supply, he has enough for %d days", numberOfDaysWorthOfPills);
     
 // what to do if I run out of pills
-// usage of if statements
+    // usage of if statements
     if (dogPills == 2){
         NSLog(@"I currently have enough pills for another day for my dog.");
     }
@@ -56,14 +56,17 @@
     
 // later that evening!
     // example of integer usage and casting
+    
     NSLog(@"Later that evening, my wife and I go through our finances to see if we have enough money to go on a cruise");
     NSLog(@"The amount we have is $%.2f but my wife told me to just round off the cents! So we have $%d", amountOfMoneyWeHave, (int)amountOfMoneyWeHave);
     
-// example of if statement with boolean logic
+    // example of if statement with boolean logic
+    
     NSLog(@"She asks to go to the Bahamas");
     NSLog(@"And I say : ");
     
-// using boolean logic in my if statements
+    // using boolean logic in my if statements
+    
     if((myVote == YES)  && (amountOfMoneyWeHave > 3500.00f)){
         NSLog(@"We have enough money, so yes! Lets go!");
     }
@@ -72,7 +75,8 @@
         NSLog(@"Sorry hunny, we dont have enough to go, lets pick somewhere else(sad face in real life).");
     }
     
-// second choice for a cruise
+    // second choice for a cruise
+    
     NSLog(@"Well, what about the Caribbean?");
     
     if((myVote == NO) || ((amountOfMoneyWeHave <= 3000.00f) && (amountOfMoneyWeHave >= 2500.00f))){
@@ -85,27 +89,33 @@
         NSLog(@"I dont want to go anywhere!");
     }
     
-// my loops section
+    // my loops section
+    
     NSLog(@"Later still, we go to sleep.  Our cat Scooter brings up toys from the downstairs.");
     NSLog(@"Everytime he brings a new toy into our room he meows...");
     
-// using a for statement, output how many times he meows!
+    // using a for statement, output how many times he meows!
+    
     for(int x = 0; x < 5; x++){
         NSLog(@"Meow!");
     }
     
-// using a while loop, I tell him to shut up!!
+    // using a while loop, I tell him to shut up!!
+    
     NSLog(@"Everytime he comes into the room, I tell him ");
     int o = 0;
     while (o < 5){
         NSLog(@"Shut up!!");
         o++;
     }
+    NSLog(@"For everytime he brings in a toy and meows");
     
-// Using a nested loop
-    for(int a = 0; a < 5; a++){
+    // Using a nested loop,  doesnt really pertain to what my story involves but for things like drawing tables
+    // and filling in ... tables, I can see this being useful. :D
+    
+    for(int a = 1; a < 5; a++){
         NSLog(@"%d", a);
-        for(int b = 0; b < 5; b++){
+        for(int b = 1; b < 5; b++){
             NSLog(@"%d", b);
         }
     }
