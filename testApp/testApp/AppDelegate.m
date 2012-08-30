@@ -31,7 +31,7 @@
     int dogPills = 120;
     int numberOfDaysWorthOfPills = dogPills / 2;
     
-    float amountOfMoneyWeHave = 3568.90f;
+    float amountOfMoneyWeHave = 2690.90f;
     BOOL myVote = YES;
     
     // explaining my dog situation
@@ -74,14 +74,14 @@
     // second choice for a cruise
     NSLog(@"Well, what about the Caribbean?");
     
-    if((myVote == YES) || (amountOfMoneyWeHave == 3000.00f)){
+    if((myVote == NO) || ((amountOfMoneyWeHave <= 3000.00f) && (amountOfMoneyWeHave >= 2500.00f))){
         NSLog(@"Its not my first vote, but what the heck!  Lets go there!");
     }
     else if(amountOfMoneyWeHave <= 2500.00f){
         NSLog(@"We dont have enough money even for this one!  So no!");
     }
     else{
-        NSLog(@"");
+        NSLog(@"I dont want to go anywhere!");
     }
     
     
