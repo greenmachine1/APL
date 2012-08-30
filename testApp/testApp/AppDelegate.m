@@ -48,7 +48,7 @@
         NSLog(@"I currently have enough pills for another day for my dog.");
     }
     else if (dogPills > 14){
-        NSLog(@"I have enough for a weeks worth of pills for Trouble.");
+        NSLog(@"I have enough for a weeks worth of pills at least for Trouble.");
     }
     else{
         NSLog(@"I have ran out of pills!  I have to get more!");
@@ -63,6 +63,7 @@
     NSLog(@"She asks to go to the Bahamas");
     NSLog(@"And I say : ");
     
+    // using boolean logic in my if statements
     if((myVote == YES)  && (amountOfMoneyWeHave > 3500.00f)){
         NSLog(@"We have enough money, so yes! Lets go!");
     }
@@ -84,8 +85,12 @@
         NSLog(@"I dont want to go anywhere!");
     }
     
-    
-    
+// my loops section
+    NSLog(@"Later still, we go to sleep.  Our cat Scooter brings up toys from the downstairs.");
+    NSLog(@"Everytime he brings a new toy into our room he meows...");
+    for(int x = 0; x < 5; x++){
+        NSLog(@"Meow!");
+    }
     
     
     
