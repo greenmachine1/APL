@@ -22,19 +22,20 @@
     
 //<------------------------------------- Main start of program-------------------------------------------->
     
-// need to come up with a story for all of this info
+
 // come home from work and feed my dogs and cats
     
     // declaring my variables
     int numberOfCats = 3;
     int numberOfDogs = 2;
     int dogPills = 120;
-    
     int numberOfDaysWorthOfPills = dogPills / 2;
     
-    float amountOfCatFood = 0.33f;
+    float amountOfMoneyWeHave = 3568.90f;
+    BOOL myVote = YES;
     
     // explaining my dog situation
+    
     NSLog(@"My wife and I have an assortment of animals.  We have %d dogs and %d cats.", numberOfDogs, numberOfCats);
     NSLog(@"Every morning whenI wake up, I have to feed my dog Trouble.");
     NSLog(@"He suffers from seizures so I have to feed him a pill to help relieve the symptoms of that.");
@@ -42,6 +43,7 @@
     NSLog(@"He takes 2 a day and according to the remaining supply, he has enough for %d days", numberOfDaysWorthOfPills);
     
     // what to do if I run out of pills
+    // usage of if statements
     if (dogPills == 2){
         NSLog(@"I currently have enough pills for another day for my dog.");
     }
@@ -52,9 +54,35 @@
         NSLog(@"I have ran out of pills!  I have to get more!");
     }
     
-    NSLog(@"Our cats only eat at night, the amount of food I give them is %f of one full bowl.", amountOfCatFood);
+// later that evening!
+    // example of integer usage and casting
+    NSLog(@"Later that evening, my wife and I go through our finances to see if we have enough money to go on a cruise");
+    NSLog(@"The amount we have is $%.2f but my wife told me to just round off the cents! So we have $%d", amountOfMoneyWeHave, (int)amountOfMoneyWeHave);
     
+    // example of if statement with boolean logic
+    NSLog(@"She asks to go to the Bahamas");
+    NSLog(@"And I say : ");
     
+    if((myVote == YES)  && (amountOfMoneyWeHave > 3500.00f)){
+        NSLog(@"We have enough money, so yes! Lets go!");
+    }
+    
+    else{
+        NSLog(@"Sorry hunny, we dont have enough to go, lets pick somewhere else(sad face in real life).");
+    }
+    
+    // second choice for a cruise
+    NSLog(@"Well, what about the Caribbean?");
+    
+    if((myVote == YES) || (amountOfMoneyWeHave == 3000.00f)){
+        NSLog(@"Its not my first vote, but what the heck!  Lets go there!");
+    }
+    else if(amountOfMoneyWeHave <= 2500.00f){
+        NSLog(@"We dont have enough money even for this one!  So no!");
+    }
+    else{
+        NSLog(@"");
+    }
     
     
     
