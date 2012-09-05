@@ -1,8 +1,8 @@
 //
 //  main.m
-//  Week_2_practice
+//  Week_2_Practice
 //
-//  Created by Cory Green on 9/1/12.
+//  Created by Cory Green on 9/5/12.
 //  Copyright (c) 2012 Cory Green. All rights reserved.
 //
 

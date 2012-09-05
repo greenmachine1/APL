@@ -1,18 +1,21 @@
 //
 //  AppDelegate.m
-//  Week_2_practice
+//  Week_2_Practice
 //
-//  Created by Cory Green on 9/1/12.
+//  Created by Cory Green on 9/5/12.
 //  Copyright (c) 2012 Cory Green. All rights reserved.
 //
 
 #import "AppDelegate.h"
+
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (void)dealloc
 {
     [_window release];
+    [_viewController release];
     [super dealloc];
 }
 
@@ -20,94 +23,11 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
+    self.viewController = [[[ViewController alloc] initWithNibName:@"ViewController" bundle:nil] autorelease];
+    self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//<------------------------------------------start of my code------------------------------------------------>
-    
-    // example of how to make an object
-    // allocating and initializing the newThingy object with the string @"hello"!
-    NSString *newThingy = [[NSString alloc] initWithString:@"hello"];
-   
-    
-    // calling on the method length within the NSString object.
-    int lengthOfString = [newThingy length];
-    NSLog(@"%d", lengthOfString);
-    
-  
-    // this actually works so long as I dont step through it ... its strange...
-    NSMutableString *mutableString = [[NSMutableString alloc] initWithString:@"More than just hello."];
-    
-    // this will actually insert the words stringThingy into mutableString at index 2
-    [mutableString insertString:@"stringThingy" atIndex:2];
-    
-    // making object of lower case and converting it to upper case
-    NSString *lowerCaseString = [[NSString alloc] initWithString:@"hello"];
-    NSString *upperCaseString = [lowerCaseString uppercaseString];
-    
-    // using the initWithFormat, Im able to use strings that have variables
-    NSString *newStringObject = [[NSString alloc] initWithFormat: @"Inserted text with variable %d", 4];
-    
-    
-    // using NSLog to mix an object string with a regular NSLog string
-    NSLog(@"This is the static string with %@", newStringObject);
-    
-   
-    
-//<--------------------------------------------end of my code------------------------------------------------>
-    
-    
     return YES;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
