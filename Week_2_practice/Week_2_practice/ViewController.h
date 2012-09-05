@@ -11,9 +11,8 @@
 @interface ViewController : UIViewController{
     
 }
-    
 
-// had to make this a class method
-+ (int) myFunction: (int) a anotherValue: (int) b;
+// am able to get away without defining it here first... Not sure why.
++ (int)myFunction:(int)a anotherValue:(int)b;
 
 @end

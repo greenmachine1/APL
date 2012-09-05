@@ -28,9 +28,7 @@
     NSLog(@"%i", newValue);
 }
 
-// this actually works!
-// had to make it a class method in order to call it from within an instantiated
-// method
+// having to make it a class method
 
 //<-------------------- my custom function ----------------------->
 + (int)myFunction:(int)a anotherValue:(int)b
