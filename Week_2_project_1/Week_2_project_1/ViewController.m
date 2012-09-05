@@ -25,10 +25,21 @@ void compareTwoNumbers(int firstNumber, int secondNumber){
     }
 }
 
+// creating an NSString function that passes in two strings then combines them then returns the result
 NSString *append(NSString *theFirst, NSString *theSecond){
     
-    return thingsss;
-}
+    // creating a mutable string that adds the two strings together
+    NSMutableString *returnedString = [[NSMutableString alloc] init];
+    
+    // appending those two strings
+    [returnedString appendString:theFirst];
+    [returnedString appendString:@" "];
+    [returnedString appendString:theSecond];
+    
+    // returning that combined string
+    return returnedString;
+    
+};
 
 
 
@@ -63,9 +74,7 @@ NSString *append(NSString *theFirst, NSString *theSecond){
     
     
     
-    -(NSString) add(int firstNumbers, int secondNumbers){
-        
-    }
+    
     
     
     
