@@ -13,6 +13,8 @@
 }
 
 // am able to get away without defining it here first... Not sure why.
-+ (int)myFunction:(int)a anotherValue:(int)b;
++ (int)add:(int)a anotherValue:(int)b;
++ (BOOL)compare:(int)c secondValue:(int)d;
+
 
 @end
