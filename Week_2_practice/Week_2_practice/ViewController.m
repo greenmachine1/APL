@@ -21,18 +21,26 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    [ViewController myFunction];
+    // my function called
+    int newValue = [ViewController myFunction: 45 anotherValue: 90];
+    
+    // experimenting with method calls
+    NSLog(@"%i", newValue);
 }
 
 // this actually works!
 // had to make it a class method in order to call it from within an instantiated
 // method
 
-//<-------------------------------- my custom function ----------------------->
-+ (void)myFunction
+//<-------------------- my custom function ----------------------->
++ (int)myFunction:(int)a anotherValue:(int)b
 {
-    NSLog(@"New thingy");
+    return a + b;
 }
+
+
+
+
 
 - (void)viewDidUnload
 {

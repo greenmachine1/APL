@@ -14,6 +14,6 @@
     
 
 // had to make this a class method
-+ (void) myFunction;
++ (int) myFunction: (int) a anotherValue: (int) b;
 
 @end
