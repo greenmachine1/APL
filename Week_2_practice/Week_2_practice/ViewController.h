@@ -9,12 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController{
-    
 }
-
-// am able to get away without defining it here first... Not sure why.
-+ (int)add:(int)a anotherValue:(int)b;
-+ (BOOL)compare:(int)c secondValue:(int)d;
-
 
 @end

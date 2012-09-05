@@ -25,25 +25,33 @@
     int c = 34;
     int d = 34;
     
-    // my function called
-    int newValue = [ViewController add: a anotherValue: b];
     
-    // experimenting with method calls
-    NSLog(@"%i", newValue);
+    // using an instance method!
+    // have to instantiate an object first that uses the ViewController
+    // @interface
+    ViewController *myObject = [[ViewController alloc] init];
+    int result = [myObject add:a anotherValue:b];
     
-    BOOL boolReturnValue = [ViewController compare:c secondValue:d];
-    NSLog(@"The two numbers %i", boolReturnValue);
+    NSLog(@"%i", result);
+    
+    // have to instantiate another object that uses ViewController
+    // @interface
+    ViewController *myBoolReturn = [[ViewController alloc] init];
+    BOOL returnBoolValue = [myBoolReturn compare:c secondValue:d];
+    
+    //BOOL boolReturnValue = [ViewController compare:c secondValue:d];
+    NSLog(@"The two numbers %i", returnBoolValue);
 }
 
-// having to make it a class method
+
 
 //<-------------------- my custom function ----------------------->
-+ (int)add:(int)a anotherValue:(int)b
+- (int)add:(int)a anotherValue:(int)b
 {
     return a + b;
 }
 
-+ (BOOL)compare:(int)c secondValue:(int)d
+- (BOOL)compare:(int)c secondValue:(int)d
 {
     if(c == d){
         return YES;
