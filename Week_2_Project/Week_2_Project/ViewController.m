@@ -32,6 +32,7 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+// method to change the background color
 + (UIColor *)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
 {
     
