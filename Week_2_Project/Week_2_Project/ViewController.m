@@ -21,6 +21,7 @@
     
     
         // creating a label which is defined in my ViewController.h file
+        // this denotes the location and size of the myLabel box
     myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
         // creating a background label color to better debug
         // do code if myLabel is full of info
