@@ -20,13 +20,14 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.1 green:0.6 blue:1.0 alpha:1.0];
     
     
-        // creating a label
-    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
+        // creating a label which is defined in my ViewController.h file
+    myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
         // creating a background label color to better debug
         // do code if myLabel is full of info
     if (myLabel != nil){
         myLabel.backgroundColor = [UIColor greenColor];
         myLabel.text = @"This is myLabel";
+        myLabel.textAlignment = UITextAlignmentCenter;
     }
     
         // makes myLabel a sibling of view
