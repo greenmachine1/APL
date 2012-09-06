@@ -25,6 +25,17 @@
     int c = 34;
     int d = 34;
     
+    int myArray[5];
+    
+    myArray[0] = 1;
+    myArray[1] = 56;
+    myArray[2] = 34;
+    myArray[3] = 4;
+    myArray[4] = 1;
+    
+    for(int i = 0; i < 5; i++){
+        NSLog(@"%d", myArray[i]);
+    }
     
     // using an instance method!
     // have to instantiate an object first that uses the ViewController
@@ -37,7 +48,6 @@
     // using myObject, I can instantiate different methods with it.
     BOOL returnBoolValue = [myObject compare:c secondValue:d];
     
-    //BOOL boolReturnValue = [ViewController compare:c secondValue:d];
     NSLog(@"The two numbers %i", returnBoolValue);
     
     // proof that I can instantiate an object and use different versions of it
@@ -48,6 +58,7 @@
 
 
 //<-------------------- my custom functions ----------------------->
+
 - (int)add:(int)a anotherValue:(int)b
 {
     return a + b;
@@ -70,6 +81,7 @@
 
 
 
+//<--------------------- end of my custom functions--------------->
 
 - (void)viewDidUnload
 {
