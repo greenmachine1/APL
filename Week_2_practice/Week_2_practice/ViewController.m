@@ -34,18 +34,20 @@
     
     NSLog(@"%i", result);
     
-    // have to instantiate another object that uses ViewController
-    // @interface
-    ViewController *myBoolReturn = [[ViewController alloc] init];
-    BOOL returnBoolValue = [myBoolReturn compare:c secondValue:d];
+    // using myObject, I can instantiate different methods with it.
+    BOOL returnBoolValue = [myObject compare:c secondValue:d];
     
     //BOOL boolReturnValue = [ViewController compare:c secondValue:d];
     NSLog(@"The two numbers %i", returnBoolValue);
+    
+    // proof that I can instantiate an object and use different versions of it
+    // for different methods
+    NSLog([myObject thisValue:@"something"]);
 }
 
 
 
-//<-------------------- my custom function ----------------------->
+//<-------------------- my custom functions ----------------------->
 - (int)add:(int)a anotherValue:(int)b
 {
     return a + b;
@@ -59,6 +61,11 @@
     else{
         return NO;
     }
+}
+
+- (NSString *)thisValue:(NSString *)new
+{
+    return new;
 }
 
 
