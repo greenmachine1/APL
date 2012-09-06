@@ -25,17 +25,7 @@
     int c = 34;
     int d = 34;
     
-    int myArray[5];
     
-    myArray[0] = 1;
-    myArray[1] = 56;
-    myArray[2] = 34;
-    myArray[3] = 4;
-    myArray[4] = 1;
-    
-    for(int i = 0; i < 5; i++){
-        NSLog(@"%d", myArray[i]);
-    }
     
     // using an instance method!
     // have to instantiate an object first that uses the ViewController
@@ -52,7 +42,13 @@
     
     // proof that I can instantiate an object and use different versions of it
     // for different methods
-    NSLog([myObject thisValue:@"something"]);
+    NSLog([myObject thisValue:@"Hello" anotherString:@"World"]);
+
+    // calls an alert to the ios device
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Hello!" message:[myObject thisValue:@"Hello" anotherString:@"World"] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil] autorelease];
+    
+    // calls the alert pointer to show the alert
+    [alert show];
 }
 
 
@@ -74,9 +70,16 @@
     }
 }
 
-- (NSString *)thisValue:(NSString *)new
+// function appends the two passed in strings and returns both added together.
+- (NSString *)thisValue:(NSString *)firstString anotherString:(NSString *)secondString
 {
-    return new;
+    // creating a mutable string.
+    NSMutableString *newString = [[NSMutableString alloc] initWithString:@""];
+    [newString appendString:firstString];
+    [newString appendString:@" "];
+    [newString appendString:secondString];
+    
+    return newString;
 }
 
 
