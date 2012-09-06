@@ -18,8 +18,21 @@
 {
     // changed the background color of my ViewController
     self.view.backgroundColor = [UIColor colorWithRed:0.1 green:0.6 blue:1.0 alpha:1.0];
+    
+    
+        // creating a label
+    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
+        // creating a background label color to better debug
+        // do code if myLabel is full of info
+    if (myLabel != nil){
+        myLabel.backgroundColor = [UIColor greenColor];
+        myLabel.text = @"This is myLabel";
+    }
+    
+        // makes myLabel a sibling of view
+    [self.view addSubview:myLabel];
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewDidUnload
@@ -31,11 +44,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-}
-// method to change the background color
-+ (UIColor *)colorWithRed:(CGFloat)red green:(CGFloat)green blue:(CGFloat)blue alpha:(CGFloat)alpha
-{
-    
 }
 
 @end
