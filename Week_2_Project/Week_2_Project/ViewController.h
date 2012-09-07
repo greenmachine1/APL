@@ -11,7 +11,8 @@
 @interface ViewController : UIViewController{
     
         // defined here in my header file so it can be used anywhere within my program
-    UILabel *myLabel;
+    UILabel *firstLabel;
+    UILabel *secondLable;
 }
 
 @end

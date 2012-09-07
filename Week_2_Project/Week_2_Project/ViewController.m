@@ -16,23 +16,38 @@
 
 - (void)viewDidLoad
 {
+    
+
     // changed the background color of my ViewController
     self.view.backgroundColor = [UIColor colorWithRed:0.1 green:0.6 blue:1.0 alpha:1.0];
     
     
+//<---------------------- this portion will be used to define the lables
         // creating a label which is defined in my ViewController.h file
         // this denotes the location and size of the myLabel box
-    myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
+    firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
         // creating a background label color to better debug
         // do code if myLabel is full of info
-    if (myLabel != nil){
-        myLabel.backgroundColor = [UIColor greenColor];
-        myLabel.text = @"This is myLabel";
-        myLabel.textAlignment = UITextAlignmentCenter;
+    if (firstLabel != nil){
+        firstLabel.backgroundColor = [UIColor greenColor];
+        firstLabel.text = @"This is myLabel";
+        firstLabel.textAlignment = UITextAlignmentCenter;
     }
     
+    secondLable = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 30.0f, 200.0f, 20.0f)];
+    
+    if(secondLable != nil){
+        firstLabel.backgroundColor = [UIColor greenColor];
+        firstLabel.text = @"This is myLabel";
+        firstLabel.textAlignment = UITextAlignmentCenter;
+    }
+    
+    
+//<------------------------ this portion will be to make the labels visible
         // makes myLabel a sibling of view
-    [self.view addSubview:myLabel];
+    [self.view addSubview:firstLabel];
+    [self.view addSubview:secondLable];
+    
     [super viewDidLoad];
         // Do any additional setup after loading the view, typically from a nib.
 }
