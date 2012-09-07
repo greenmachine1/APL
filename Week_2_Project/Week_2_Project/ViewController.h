@@ -20,6 +20,7 @@
     UILabel *seventhLabel;
     UILabel *eigthLabel;
     UILabel *ninthLabel;
+    UILabel *tenthLabel;
     
 }
 
