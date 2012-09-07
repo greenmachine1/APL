@@ -18,6 +18,8 @@
     UILabel *fifthLabel;
     UILabel *sixthLabel;
     UILabel *seventhLabel;
+    UILabel *eigthLabel;
+    UILabel *ninthLabel;
     
 }
 

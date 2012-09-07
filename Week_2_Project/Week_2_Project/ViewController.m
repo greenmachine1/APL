@@ -84,6 +84,36 @@
         seventhLabel.numberOfLines = 10;
     }
     
+    eigthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 340.0f, 300.0f, 20.0f)];
+    
+    if(eigthLabel != nil){
+        eigthLabel.backgroundColor = [UIColor greenColor];
+        eigthLabel.text = @"Key words in this book";
+        eigthLabel.textAlignment = UITextAlignmentLeft;
+    }
+    
+//<----------------------------- creation of my NSArray for my keywords ----------------------------------------->
+    // creation of my topicsOfBookArray that hold the actual topics
+    NSArray *topicsOfBookArray = [[NSArray alloc] initWithObjects:@"1", @"2", @"3", @"4", @"5", nil];
+    
+    for(int i = 0; i < 5; i++){
+        NSLog(@"%@", [topicsOfBookArray objectAtIndex:i]);
+    }
+    
+    // making a mutable array that can hold 5 elements.
+    NSMutableString *topicsOfBookString = [[NSMutableString alloc] initWithString:@" ,"];
+    
+   //[topicsOfBookString appendString:]
+   
+    
+//<------------------------------- end of NSArray stuff ---------------------------------------------------------->
+    ninthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 340.0f, 300.0f, 20.0f)];
+    
+    if(ninthLabel != nil){
+        ninthLabel.backgroundColor = [UIColor greenColor];
+        ninthLabel.text = @"Key words in this book";
+        ninthLabel.textAlignment = UITextAlignmentLeft;
+    }
     
 //<------------------------ this portion will be to make the labels visible ------------------------------------------>
     
@@ -95,6 +125,7 @@
     [self.view addSubview:fifthLabel];
     [self.view addSubview:sixthLabel];
     [self.view addSubview:seventhLabel];
+    [self.view addSubview:eigthLabel];
     
     [super viewDidLoad];
         // Do any additional setup after loading the view, typically from a nib.
