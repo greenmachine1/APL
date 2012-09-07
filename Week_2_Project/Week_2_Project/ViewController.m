@@ -74,12 +74,14 @@
         sixthLabel.textAlignment = UITextAlignmentCenter;
     }
     
-    seventhLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 300.0f, 20.0f)];
+    // this label will span over multiple lines and include the summory of the book.
+    seventhLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 300.0f, 200.0f)];
     
     if(seventhLabel != nil){
         seventhLabel.backgroundColor = [UIColor greenColor];
-        seventhLabel.text = @"This is the Summory";
+        seventhLabel.text = @"This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory";
         seventhLabel.textAlignment = UITextAlignmentCenter;
+        seventhLabel.numberOfLines = 10;
     }
     
     
