@@ -25,28 +25,46 @@
 //<---------------------- this portion will be used to define the lables
         // creating a label which is defined in my ViewController.h file
         // this denotes the location and size of the myLabel box
+    
     firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
-        // creating a background label color to better debug
-        // do code if myLabel is full of info
+        
     if (firstLabel != nil){
         firstLabel.backgroundColor = [UIColor greenColor];
         firstLabel.text = @"This is myLabel";
         firstLabel.textAlignment = UITextAlignmentCenter;
     }
     
-    secondLable = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 30.0f, 200.0f, 20.0f)];
+    secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 40.0f, 200.0f, 20.0f)];
     
-    if(secondLable != nil){
-        firstLabel.backgroundColor = [UIColor greenColor];
-        firstLabel.text = @"This is myLabel";
-        firstLabel.textAlignment = UITextAlignmentCenter;
+    if(secondLabel != nil){
+        secondLabel.backgroundColor = [UIColor greenColor];
+        secondLabel.text = @"This is myLabel";
+        secondLabel.textAlignment = UITextAlignmentCenter;
+    }
+    
+    thirdLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 70.0f, 200.0f, 20.0f)];
+    
+    if(thirdLabel != nil){
+        thirdLabel.backgroundColor = [UIColor greenColor];
+        thirdLabel.text = @"This is myLabel";
+        thirdLabel.textAlignment = UITextAlignmentCenter;
+    }
+    
+    forthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 20.0f)];
+    
+    if(forthLabel != nil){
+        forthLabel.backgroundColor = [UIColor greenColor];
+        forthLabel.text = @"This is myLabel";
+        forthLabel.textAlignment = UITextAlignmentCenter;
     }
     
     
 //<------------------------ this portion will be to make the labels visible
         // makes myLabel a sibling of view
     [self.view addSubview:firstLabel];
-    [self.view addSubview:secondLable];
+    [self.view addSubview:secondLabel];
+    [self.view addSubview:thirdLabel];
+    [self.view addSubview:forthLabel];
     
     [super viewDidLoad];
         // Do any additional setup after loading the view, typically from a nib.

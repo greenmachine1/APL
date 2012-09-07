@@ -12,7 +12,9 @@
     
         // defined here in my header file so it can be used anywhere within my program
     UILabel *firstLabel;
-    UILabel *secondLable;
+    UILabel *secondLabel;
+    UILabel *thirdLabel;
+    UILabel *forthLabel;
 }
 
 @end
