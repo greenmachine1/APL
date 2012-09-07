@@ -11,15 +11,15 @@
 @interface ViewController : UIViewController{
     
     // defined here in my header file so it can be used anywhere within my program
-    UILabel *firstLabel;
-    UILabel *secondLabel;
-    UILabel *thirdLabel;
-    UILabel *forthLabel;
-    UILabel *fifthLabel;
-    UILabel *sixthLabel;
-    UILabel *seventhLabel;
-    UILabel *eigthLabel;
-    UILabel *ninthLabel;
+    UILabel *title;
+    UILabel *author;
+    UILabel *nameOfAuthor;
+    UILabel *publisher;
+    UILabel *nameOfPublisher;
+    UILabel *summory;
+    UILabel *summoryBody;
+    UILabel *listLabel;
+    UILabel *listItems;
 
     
 }

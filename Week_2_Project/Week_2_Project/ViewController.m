@@ -27,69 +27,69 @@
         // creating a label which is defined in my ViewController.h file
         // this denotes the location and size of the myLabel box
         // CGRectMake(10.0f, 10.0f, 300.0f, 20.0f = CGRectMake(x, y, x, y) (x, y) - location, (x, y) - size
-    firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 300.0f, 20.0f)];
+    title = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 300.0f, 20.0f)];
         
-    if (firstLabel != nil){
-        firstLabel.backgroundColor = [UIColor greenColor];
-        firstLabel.text = @"Congo";
-        firstLabel.textAlignment = UITextAlignmentCenter;
+    if (title != nil){
+        title.backgroundColor = [UIColor greenColor];
+        title.text = @"Congo";
+        title.textAlignment = UITextAlignmentCenter;
     }
     
-    secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 40.0f, 60.0f, 20.0f)];
+    author = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 40.0f, 60.0f, 20.0f)];
     
-    if(secondLabel != nil){
-        secondLabel.backgroundColor = [UIColor yellowColor];
-        secondLabel.text = @"Author: ";
-        secondLabel.textAlignment = UITextAlignmentRight;
+    if(author != nil){
+        author.backgroundColor = [UIColor yellowColor];
+        author.text = @"Author: ";
+        author.textAlignment = UITextAlignmentRight;
     }
     
-    thirdLabel = [[UILabel alloc] initWithFrame:CGRectMake(80.0f, 40.0f, 230.0f, 20.0f)];
+    nameOfAuthor = [[UILabel alloc] initWithFrame:CGRectMake(80.0f, 40.0f, 230.0f, 20.0f)];
     
-    if(thirdLabel != nil){
-        thirdLabel.backgroundColor = [UIColor colorWithRed:0.3 green:0.7 blue:1.0 alpha:0.9];
-        thirdLabel.text = @"Micheal Crichton";
-        thirdLabel.textAlignment = UITextAlignmentLeft;
+    if(nameOfAuthor != nil){
+        nameOfAuthor.backgroundColor = [UIColor colorWithRed:0.3 green:0.7 blue:1.0 alpha:0.9];
+        nameOfAuthor.text = @"Micheal Crichton";
+        nameOfAuthor.textAlignment = UITextAlignmentLeft;
     }
     
-    forthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 70.0f, 100.0f, 20.0f)];
+    publisher = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 70.0f, 100.0f, 20.0f)];
     
-    if(forthLabel != nil){
-        forthLabel.backgroundColor = [UIColor orangeColor];
-        forthLabel.text = @"Published: ";
-        forthLabel.textAlignment = UITextAlignmentRight;
+    if(publisher != nil){
+        publisher.backgroundColor = [UIColor orangeColor];
+        publisher.text = @"Published: ";
+        publisher.textAlignment = UITextAlignmentRight;
     }
-    fifthLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 70.0f, 190.0f, 20.0f)];
+    nameOfPublisher = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 70.0f, 190.0f, 20.0f)];
     
-    if(fifthLabel != nil){
-        fifthLabel.backgroundColor = [UIColor brownColor];
-        fifthLabel.text = @"Knopf 1980";
-        fifthLabel.textAlignment = UITextAlignmentLeft;
+    if(nameOfPublisher != nil){
+        nameOfPublisher.backgroundColor = [UIColor brownColor];
+        nameOfPublisher.text = @"Knopf 1980";
+        nameOfPublisher.textAlignment = UITextAlignmentLeft;
     }
     
-    sixthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 300.0f, 20.0f)];
+    summory = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 300.0f, 20.0f)];
     
-    if(sixthLabel != nil){
-        sixthLabel.backgroundColor = [UIColor whiteColor];
-        sixthLabel.text = @"Summory";
-        sixthLabel.textAlignment = UITextAlignmentCenter;
+    if(summory != nil){
+        summory.backgroundColor = [UIColor whiteColor];
+        summory.text = @"Summory";
+        summory.textAlignment = UITextAlignmentCenter;
     }
     
     // this label will span over multiple lines and include the summory of the book.
-    seventhLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 300.0f, 200.0f)];
+    summoryBody = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 300.0f, 200.0f)];
     
-    if(seventhLabel != nil){
-        seventhLabel.backgroundColor = [UIColor colorWithRed:1.0 green:0.2 blue:1.0 alpha:1.0];
-        seventhLabel.text = @"This Book by Micheal Crichton is about an expedition to the Congo with a sign language speaking Gorilla named Amy.  This expedition is in search of the lost city of Zinj and diamonds.  Danger insues when the group discovers a new breed of aggressive Gorillas bred to protect the city!";
-        seventhLabel.textAlignment = UITextAlignmentCenter;
-        seventhLabel.numberOfLines = 10;
+    if(summoryBody != nil){
+        summoryBody.backgroundColor = [UIColor colorWithRed:1.0 green:0.2 blue:1.0 alpha:1.0];
+        summoryBody.text = @"This Book by Micheal Crichton is about an expedition to the Congo with a sign language speaking Gorilla named Amy.  This expedition is in search of the lost city of Zinj and diamonds.  Danger insues when the group discovers a new breed of aggressive Gorillas bred to protect the city!";
+        summoryBody.textAlignment = UITextAlignmentCenter;
+        summoryBody.numberOfLines = 10;
     }
     
-    eigthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 340.0f, 300.0f, 20.0f)];
+    listLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 340.0f, 300.0f, 20.0f)];
     
-    if(eigthLabel != nil){
-        eigthLabel.backgroundColor = [UIColor colorWithRed:0.6 green:0.8 blue:0.7 alpha:0.9];
-        eigthLabel.text = @"List of items";
-        eigthLabel.textAlignment = UITextAlignmentLeft;
+    if(listLabel != nil){
+        listLabel.backgroundColor = [UIColor colorWithRed:0.6 green:0.8 blue:0.7 alpha:0.9];
+        listLabel.text = @"List of items";
+        listLabel.textAlignment = UITextAlignmentLeft;
     }
     
     
@@ -108,27 +108,27 @@
 //<------------------------------- end of NSArray stuff ---------------------------------------------------------->
     
     // my NSArray label
-    ninthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 370.0f, 300.0f, 40.0f)];
+    listItems = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 370.0f, 300.0f, 40.0f)];
     
-    if(ninthLabel != nil){
-        ninthLabel.backgroundColor = [UIColor grayColor];
-        ninthLabel.text = newMutableString;
-        ninthLabel.textAlignment = UITextAlignmentCenter;
-        ninthLabel.numberOfLines = 3;
+    if(listItems != nil){
+        listItems.backgroundColor = [UIColor grayColor];
+        listItems.text = newMutableString;
+        listItems.textAlignment = UITextAlignmentCenter;
+        listItems.numberOfLines = 3;
     }
     
 //<------------------------ this portion will be to make the labels visible ------------------------------------------>
     
     // makes myLabel a sibling of view
-    [self.view addSubview:firstLabel];
-    [self.view addSubview:secondLabel];
-    [self.view addSubview:thirdLabel];
-    [self.view addSubview:forthLabel];
-    [self.view addSubview:fifthLabel];
-    [self.view addSubview:sixthLabel];
-    [self.view addSubview:seventhLabel];
-    [self.view addSubview:eigthLabel];
-    [self.view addSubview:ninthLabel];
+    [self.view addSubview:title];
+    [self.view addSubview:author];
+    [self.view addSubview:nameOfAuthor];
+    [self.view addSubview:publisher];
+    [self.view addSubview:nameOfPublisher];
+    [self.view addSubview:summory];
+    [self.view addSubview:summoryBody];
+    [self.view addSubview:listLabel];
+    [self.view addSubview:listItems];
     
 
     
