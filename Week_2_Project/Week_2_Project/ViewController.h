@@ -10,11 +10,15 @@
 
 @interface ViewController : UIViewController{
     
-        // defined here in my header file so it can be used anywhere within my program
+// defined here in my header file so it can be used anywhere within my program
     UILabel *firstLabel;
     UILabel *secondLabel;
     UILabel *thirdLabel;
     UILabel *forthLabel;
+    UILabel *fifthLabel;
+    UILabel *sixthLabel;
+    UILabel *seventhLabel;
+    
 }
 
 @end

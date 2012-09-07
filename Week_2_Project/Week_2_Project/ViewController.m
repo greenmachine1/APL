@@ -57,14 +57,41 @@
         forthLabel.text = @"This is myLabel";
         forthLabel.textAlignment = UITextAlignmentCenter;
     }
+    fifthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 200.0f, 20.0f)];
+    
+    if(fifthLabel != nil){
+        fifthLabel.backgroundColor = [UIColor greenColor];
+        fifthLabel.text = @"This is myLabel";
+        fifthLabel.textAlignment = UITextAlignmentCenter;
+    }
+    
+    sixthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 160.0f, 200.0f, 20.0f)];
+    
+    if(sixthLabel != nil){
+        sixthLabel.backgroundColor = [UIColor greenColor];
+        sixthLabel.text = @"This is myLabel";
+        sixthLabel.textAlignment = UITextAlignmentCenter;
+    }
+    
+    seventhLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 190.0f, 200.0f, 20.0f)];
+    
+    if(seventhLabel != nil){
+        seventhLabel.backgroundColor = [UIColor greenColor];
+        seventhLabel.text = @"This is myLabel";
+        seventhLabel.textAlignment = UITextAlignmentCenter;
+    }
     
     
 //<------------------------ this portion will be to make the labels visible
-        // makes myLabel a sibling of view
+    
+    // makes myLabel a sibling of view
     [self.view addSubview:firstLabel];
     [self.view addSubview:secondLabel];
     [self.view addSubview:thirdLabel];
     [self.view addSubview:forthLabel];
+    [self.view addSubview:fifthLabel];
+    [self.view addSubview:sixthLabel];
+    [self.view addSubview:seventhLabel];
     
     [super viewDidLoad];
         // Do any additional setup after loading the view, typically from a nib.
