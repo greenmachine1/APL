@@ -22,67 +22,68 @@
     self.view.backgroundColor = [UIColor colorWithRed:0.1 green:0.6 blue:1.0 alpha:1.0];
     
     
-//<---------------------- this portion will be used to define the lables
+//<---------------------- this portion will be used to define the lables-------------------------------------------->
+    
         // creating a label which is defined in my ViewController.h file
         // this denotes the location and size of the myLabel box
-    
-    firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 200.0f, 20.0f)];
+        // CGRectMake(10.0f, 10.0f, 300.0f, 20.0f = CGRectMake(x, y, x, y) (x, y) - location, (x, y) - size
+    firstLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 300.0f, 20.0f)];
         
     if (firstLabel != nil){
         firstLabel.backgroundColor = [UIColor greenColor];
-        firstLabel.text = @"This is myLabel";
+        firstLabel.text = @"Congo";
         firstLabel.textAlignment = UITextAlignmentCenter;
     }
     
-    secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 40.0f, 200.0f, 20.0f)];
+    secondLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 40.0f, 60.0f, 20.0f)];
     
     if(secondLabel != nil){
         secondLabel.backgroundColor = [UIColor greenColor];
-        secondLabel.text = @"This is myLabel";
-        secondLabel.textAlignment = UITextAlignmentCenter;
+        secondLabel.text = @"Author: ";
+        secondLabel.textAlignment = UITextAlignmentRight;
     }
     
-    thirdLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 70.0f, 200.0f, 20.0f)];
+    thirdLabel = [[UILabel alloc] initWithFrame:CGRectMake(80.0f, 40.0f, 230.0f, 20.0f)];
     
     if(thirdLabel != nil){
         thirdLabel.backgroundColor = [UIColor greenColor];
-        thirdLabel.text = @"This is myLabel";
-        thirdLabel.textAlignment = UITextAlignmentCenter;
+        thirdLabel.text = @"Micheal Crichton";
+        thirdLabel.textAlignment = UITextAlignmentLeft;
     }
     
-    forthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 200.0f, 20.0f)];
+    forthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 70.0f, 100.0f, 20.0f)];
     
     if(forthLabel != nil){
         forthLabel.backgroundColor = [UIColor greenColor];
-        forthLabel.text = @"This is myLabel";
-        forthLabel.textAlignment = UITextAlignmentCenter;
+        forthLabel.text = @"Published: ";
+        forthLabel.textAlignment = UITextAlignmentRight;
     }
-    fifthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 200.0f, 20.0f)];
+    fifthLabel = [[UILabel alloc] initWithFrame:CGRectMake(120.0f, 70.0f, 190.0f, 20.0f)];
     
     if(fifthLabel != nil){
         fifthLabel.backgroundColor = [UIColor greenColor];
-        fifthLabel.text = @"This is myLabel";
-        fifthLabel.textAlignment = UITextAlignmentCenter;
+        fifthLabel.text = @"Knopf";
+        fifthLabel.textAlignment = UITextAlignmentLeft;
     }
     
-    sixthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 160.0f, 200.0f, 20.0f)];
+    sixthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 300.0f, 20.0f)];
     
     if(sixthLabel != nil){
         sixthLabel.backgroundColor = [UIColor greenColor];
-        sixthLabel.text = @"This is myLabel";
+        sixthLabel.text = @"Summory";
         sixthLabel.textAlignment = UITextAlignmentCenter;
     }
     
-    seventhLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 190.0f, 200.0f, 20.0f)];
+    seventhLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 130.0f, 300.0f, 20.0f)];
     
     if(seventhLabel != nil){
         seventhLabel.backgroundColor = [UIColor greenColor];
-        seventhLabel.text = @"This is myLabel";
+        seventhLabel.text = @"This is the Summory";
         seventhLabel.textAlignment = UITextAlignmentCenter;
     }
     
     
-//<------------------------ this portion will be to make the labels visible
+//<------------------------ this portion will be to make the labels visible ------------------------------------------>
     
     // makes myLabel a sibling of view
     [self.view addSubview:firstLabel];
