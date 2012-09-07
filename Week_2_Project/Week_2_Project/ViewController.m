@@ -79,7 +79,7 @@
     
     if(seventhLabel != nil){
         seventhLabel.backgroundColor = [UIColor colorWithRed:1.0 green:0.2 blue:1.0 alpha:1.0];
-        seventhLabel.text = @"This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory This is the Summory";
+        seventhLabel.text = @"This Book by Micheal Crichton is about an expedition to the Congo with a sign language speaking Gorilla named Amy.  This expedition is in search of the lost city of Zinj and diamonds.  Danger insues when the group discovers a new breed of aggressive Gorillas bred to protect the city!";
         seventhLabel.textAlignment = UITextAlignmentCenter;
         seventhLabel.numberOfLines = 10;
     }
@@ -88,14 +88,14 @@
     
     if(eigthLabel != nil){
         eigthLabel.backgroundColor = [UIColor colorWithRed:0.6 green:0.8 blue:0.7 alpha:0.9];
-        eigthLabel.text = @"Key words in this book";
+        eigthLabel.text = @"List of items";
         eigthLabel.textAlignment = UITextAlignmentLeft;
     }
     
     
 //<----------------------------- creation of my NSArray for my keywords ----------------------------------------->
     // creation of my topicsOfBookArray that hold the actual topics
-    NSArray *topicsOfBookArray = [[NSArray alloc] initWithObjects:@"apes", @"gems", @"expedition", @"science", @"Amy", nil];
+    NSArray *topicsOfBookArray = [[NSArray alloc] initWithObjects:@"Gorilla", @"Gems", @"Expedition", @"Science", @"Amy", nil];
     
     // created a mutableString to hold all of my array elements
     NSMutableString *newMutableString = [[NSMutableString alloc] init];
@@ -106,12 +106,15 @@
     }
     
 //<------------------------------- end of NSArray stuff ---------------------------------------------------------->
-    ninthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 370.0f, 300.0f, 20.0f)];
+    
+    // my NSArray label
+    ninthLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 370.0f, 300.0f, 40.0f)];
     
     if(ninthLabel != nil){
         ninthLabel.backgroundColor = [UIColor grayColor];
         ninthLabel.text = newMutableString;
-        ninthLabel.textAlignment = UITextAlignmentLeft;
+        ninthLabel.textAlignment = UITextAlignmentCenter;
+        ninthLabel.numberOfLines = 3;
     }
     
 //<------------------------ this portion will be to make the labels visible ------------------------------------------>
@@ -126,7 +129,7 @@
     [self.view addSubview:seventhLabel];
     [self.view addSubview:eigthLabel];
     [self.view addSubview:ninthLabel];
-    [self.view addSubview:tenthLabel];
+    
 
     
     [super viewDidLoad];
