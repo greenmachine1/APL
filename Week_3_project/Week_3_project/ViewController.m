@@ -36,9 +36,12 @@
     // calls on the displayAlertWithString using the append function output
     [self displayAlertWithString:[self append:firstStringValue secondString:secondStringValue]];
     
+    // taking the add function and using the result into newNumber
     int newNumber = [self add:firstIntegerValue second:secondIntegerValue];
     
-    NSLog(@"%i", newNumber);
+    // assigning newNSNumber with the result of newNumber
+    NSNumber *newNSNumber = [[NSNumber alloc] initWithInt:newNumber];
+    
     
     
     
