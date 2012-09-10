@@ -27,12 +27,11 @@
     NSLog(@"%i", addedVariable);
 
     // calling on the append function
-    NSLog([self append:@"Cory" secondString:@"Green"]);
+    //NSLog([self append:@"Cory" secondString:@"Green"]);
     
+    UIAlertView *newAlertView = [[UIAlertView alloc] initWithTitle:@"Hello!" message:[self append:@"Cory" secondString:@"Green"] delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
     
-    
-    
-    
+    [newAlertView show];
     
     
     
