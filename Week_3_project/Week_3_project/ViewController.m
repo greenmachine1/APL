@@ -17,19 +17,28 @@
 - (void)viewDidLoad
 {
     
+    NSString *firstStringValue = [[NSString alloc] initWithString:@"Cory"];
+    NSString *secondStringValue = [[NSString alloc] initWithString:@"Green"];
+    
+    int firstIntegerValue = 6;
+    int secondIntegerValue = 90;
+    
+    
     // this is just a practice of what is going to be coming up for this weeks assignment
     int returnedValue = [self myFunction];
     
     NSLog(@"%i", returnedValue);
     
-    int addedVariable = [self add:returnedValue second:90];
+    int addedVariable = [self add:returnedValue second:secondIntegerValue];
     
     NSLog(@"%i", addedVariable);
 
     // calls on the displayAlertWithString using the append function output
-    [self displayAlertWithString:[self append:@"Cory" secondString:@"Green"]];
+    [self displayAlertWithString:[self append:firstStringValue secondString:secondStringValue]];
     
+    int newNumber = [self add:firstIntegerValue second:secondIntegerValue];
     
+    NSLog(@"%i", newNumber);
     
     
     
@@ -87,6 +96,19 @@
     
     [newAlert show];
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //<----------------------end of custom functions-------------------------->
 
