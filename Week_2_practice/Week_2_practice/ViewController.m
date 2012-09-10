@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    int a = 45;
+    /*int a = 45;
     int b = 90;
     int c = 34;
     int d = 34;
@@ -48,7 +48,12 @@
     UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"Hello!" message:[myObject thisValue:@"Hello" anotherString:@"World"] delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:nil, nil] autorelease];
     
     // calls the alert pointer to show the alert
-    [alert show];
+    [alert show]; */
+    
+    
+    // proper way to call the function!
+    [self newFunction:@"Hallo!"];
+    
 }
 
 
@@ -82,9 +87,14 @@
     return newString;
 }
 
+// function newFunction
+- (void)newFunction:(NSString *)newString
+{
+    NSLog(@"%@", newString);
+}
 
 
-//<--------------------- end of my custom functions--------------->
+
 
 - (void)viewDidUnload
 {

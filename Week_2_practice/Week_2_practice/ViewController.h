@@ -11,4 +11,7 @@
 @interface ViewController : UIViewController{
 }
 
+// has to be defined here first
+-(void)newFunction:(NSString*)newString;
+
 @end
