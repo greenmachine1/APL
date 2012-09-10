@@ -14,5 +14,6 @@
 -(int)myFunction;
 -(int)add:(int)first second:(int)second;
 -(NSString*)append:(NSString*)firstString secondString:(NSString*)secondString;
+-(void)displayAlertWithString:(NSString *)string;
 
 @end

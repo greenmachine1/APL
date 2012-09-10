@@ -26,12 +26,8 @@
     
     NSLog(@"%i", addedVariable);
 
-    // calling on the append function
-    //NSLog([self append:@"Cory" secondString:@"Green"]);
-    
-    UIAlertView *newAlertView = [[UIAlertView alloc] initWithTitle:@"Hello!" message:[self append:@"Cory" secondString:@"Green"] delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
-    
-    [newAlertView show];
+    // calls on the displayAlertWithString using the append function output
+    [self displayAlertWithString:[self append:@"Cory" secondString:@"Green"]];
     
     
     
@@ -84,6 +80,13 @@
     
 }
 
+// takes a string and displays it.
+-(void)displayAlertWithString:(NSString *)string
+{
+    UIAlertView *newAlert = [[UIAlertView alloc] initWithTitle:@"New title" message:string delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    
+    [newAlert show];
+}
 
 //<----------------------end of custom functions-------------------------->
 
