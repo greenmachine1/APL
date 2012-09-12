@@ -140,7 +140,13 @@
 // takes a string and displays it.
 -(void)displayAlertWithString:(NSString *)string secondString:(NSString *)secondString
 {
-    UIAlertView *newAlert = [[UIAlertView alloc] initWithTitle:@"New title" message: string delegate:nil cancelButtonTitle:secondString otherButtonTitles:nil];
+    NSMutableString *tempMutableString = [[NSMutableString alloc] initWithString:@""];
+    
+    [tempMutableString appendString:string];
+    [tempMutableString appendString:@" "];
+    [tempMutableString appendString:secondString];
+    
+    UIAlertView *newAlert = [[UIAlertView alloc] initWithTitle:@"New title" message: tempMutableString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     
     [newAlert show];
 }
