@@ -56,11 +56,10 @@
     
     // creating a placeholder for the new string that gets returned from the append function
     NSString *newString =[[NSString alloc] initWithString:
-                          [self append:firstStringValue secondString:secondStringValue]];
+                          [self append:firstStringValue second:secondStringValue]];
     
     
-    // calls the displayAlertWithString function passing in the newString NSString which appends two strings
-    [self displayAlertWithString:newString secondNumber:9];
+//<--------------------------- section is for converting the integer value to a string --------------------------------->
     
     // storing my returned value from my add function into an int called returnedValueFromAddFunction
     int returnedValueFromAddFunction = [self add:firstIntegerValue second:secondIntegerValue];
@@ -68,9 +67,18 @@
     // initializing newNumer with the returned value of returnedValueFromAddFunction
     NSNumber *newNumber = [[NSNumber alloc] initWithInt:returnedValueFromAddFunction];
     
+    // made a mutable string
+    NSMutableString *newStringThing = [[NSMutableString alloc] initWithString:@""];
     
+    // appendingFormat with newNumber
+    [newStringThing appendFormat:@"%@", newNumber];
     
+//<------------------------------------------------- end ---------------------------------------------------------------->
+
+    // calls the displayAlertWithString function passing in the newString NSString which appends two strings
+    [self displayAlertWithString:newString secondString:newStringThing];
     
+  
    
    
     
@@ -117,22 +125,22 @@
 }
 
 // function used to append two strings together then return the results
--(NSString*)append:(NSString*)firstString secondString:(NSString*)secondString
+-(NSString*)append:(NSString*)firstString second:(NSString*)second
 {
     NSMutableString *mutableStringThing = [[NSMutableString alloc] init];
     
     [mutableStringThing appendString:firstString];
     [mutableStringThing appendString:@" "];
-    [mutableStringThing appendString:secondString];
+    [mutableStringThing appendString:second];
     
     return mutableStringThing;
     
 }
 
 // takes a string and displays it.
--(void)displayAlertWithString:(NSString *)string secondNumber:(NSNumber *)secondnumber
+-(void)displayAlertWithString:(NSString *)string secondString:(NSString *)secondString
 {
-    UIAlertView *newAlert = [[UIAlertView alloc] initWithTitle:@"New title" message: string delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    UIAlertView *newAlert = [[UIAlertView alloc] initWithTitle:@"New title" message: string delegate:nil cancelButtonTitle:secondString otherButtonTitles:nil];
     
     [newAlert show];
 }

@@ -15,7 +15,8 @@
 
 -(BOOL)compare:(NSInteger *)firstNumber secondNumber:(NSInteger *)secondNumber;
 
--(NSString*)append:(NSString*)firstString secondString:(NSString*)secondString;
--(void)displayAlertWithString:(NSString *)string secondNumber:(NSNumber *)secondnumber;
+-(NSString*)append:(NSString*)firstString second:(NSString*)second;
+
+-(void)displayAlertWithString:(NSString *)string secondString:(NSString *)secondString;
 
 @end
