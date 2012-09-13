@@ -26,59 +26,86 @@
      Create a function called Append. This function will take two NSStrings and return a new NSString containing the appended strings using an NSMutableString and the Append method.
      done ^
      
-     Call the Append function with two NSStrings. Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
-     done^
-     
      Create a function called DisplayAlertWithString. This function will take as a parameter an NSString.
      done^
      
+     
+     
+     
+     Call the Append function with two NSStrings. Capture the result and display a UIAlertView with the appended string using displayAlertWithString.
+     done^
+     
+     
+     
      Call the Add function passing in two integer values. Capture the return of this function into a variable.
      done ^
+     
+     
      
      Bundle the returned integer into an NSNumber and then convert it to a NSString and pass it to the DisplayAlertWithString function.
      
      
      Give it some text for the title. The message will read, "The number is 00". Replace the 00 with the integer passed into the function.
+     done ^
+     
      Call the Compare function with two integer values. If Compare returns YES, display an UIAlertView both with the input values and the result using the DisplayAlertWithString function
      
     
     */
+// start ---------------------------------------------------------------------------------------------------------------->
     
-    // declaring my variables
-    NSString *firstStringValue = [[NSString alloc] initWithString:@"Cory"];
-    NSString *secondStringValue = [[NSString alloc] initWithString:@"Green"];
+    // declaring variables
     
-    int firstIntegerValue = 6;
-    int secondIntegerValue = 90;
-    // done declaring variables
+    int number1 = 50;
+    int number2 = 129;
     
-    
-    
-    // creating a placeholder for the new string that gets returned from the append function
-    NSString *newString =[[NSString alloc] initWithString:
-                          [self append:firstStringValue second:secondStringValue]];
+    NSInteger number1NSInteger = 45;
+    NSInteger number2NSInteger = 46;
     
     
-//<--------------------------- section is for converting the integer value to a string --------------------------------->
+    // this string will be the first part of my append function which is passed in to my displayAlert function
+    NSString *firstString = [[NSString alloc] initWithString:@"The number is"];
     
-    // storing my returned value from my add function into an int called returnedValueFromAddFunction
-    int returnedValueFromAddFunction = [self add:firstIntegerValue second:secondIntegerValue];
     
-    // initializing newNumer with the returned value of returnedValueFromAddFunction
-    NSNumber *newNumber = [[NSNumber alloc] initWithInt:returnedValueFromAddFunction];
-    
-    // made a mutable string
-    NSMutableString *newStringThing = [[NSMutableString alloc] initWithString:@""];
-    
-    // appendingFormat with newNumber
-    [newStringThing appendFormat:@"%@", newNumber];
-    
-//<------------------------------------------------- end ---------------------------------------------------------------->
 
-    // calls the displayAlertWithString function passing in the newString NSString which appends two strings
-    [self displayAlertWithString:newString secondString:newStringThing];
+    // calls the add function which adds two ints together and returns the result
+    int returnedValue = [self add:number1 second:number2];
     
-  
+    
+    // converted returnedValue from an Int to an NSNumber, then put it in a string
+    NSNumber *newNumberFromReturnedValue = [[NSNumber alloc] initWithInt:returnedValue];
+    NSString *bundledString = [[NSString alloc] initWithFormat:@"%@ %@",firstString, newNumberFromReturnedValue];
+    
+    
+    // mutable string outcome is the end result if the two NSIntegers are equal
+    NSMutableString *outCome = [[NSMutableString alloc] initWithFormat:@"The result that %i and %i are equal is ", number1NSInteger, number2NSInteger];
+    
+    // if compare returns true, then append string, if not then return with false.
+    if ([self compare:number1NSInteger secondNumber:number2NSInteger] == TRUE)
+    {
+        [outCome appendString:@"true"];
+    }
+    
+    else{
+        [outCome appendString:@"false"];
+    }
+    
+        
+    
+    // this is the final string which finally gets passed to the displayAlertWithString function    
+    NSString *finalString = [[NSString alloc] initWithFormat:@"%@ %@", bundledString, outCome];
+    
+   
+    
+    
+    
+    
+    
+    // the end result!
+    
+    [self displayAlertWithString:finalString];
+    
+// end------------------------------------------------------------------------------------------------------------------->
    
    
     
@@ -113,8 +140,11 @@
     return first + second;
 }
 
+
+
+
 // my compare function
--(BOOL)compare:(NSInteger *)firstNumber secondNumber:(NSInteger *)secondNumber
+-(BOOL)compare:(NSInteger)firstNumber secondNumber:(NSInteger)secondNumber
 {
     if(firstNumber == secondNumber){
         return YES;
@@ -124,38 +154,37 @@
     }
 }
 
+
+
+
+
 // function used to append two strings together then return the results
 -(NSString*)append:(NSString*)firstString second:(NSString*)second
 {
-    NSMutableString *mutableStringThing = [[NSMutableString alloc] init];
+    NSMutableString *mutableStringThing = [[NSMutableString alloc] initWithString:firstString];
     
-    [mutableStringThing appendString:firstString];
-    [mutableStringThing appendString:@" "];
-    [mutableStringThing appendString:second];
+    if (mutableStringThing != nil){
+        
+        [mutableStringThing appendString:second];
+    }
     
     return mutableStringThing;
     
+    
 }
 
+
+
+
+
 // takes a string and displays it.
--(void)displayAlertWithString:(NSString *)string secondString:(NSString *)secondString
+-(void)displayAlertWithString:(NSString *)string
 {
-    NSMutableString *tempMutableString = [[NSMutableString alloc] initWithString:@""];
     
-    [tempMutableString appendString:string];
-    [tempMutableString appendString:@" "];
-    [tempMutableString appendString:secondString];
-    
-    UIAlertView *newAlert = [[UIAlertView alloc] initWithTitle:@"New title" message: tempMutableString delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    UIAlertView *newAlert = [[UIAlertView alloc] initWithTitle:@"My text box!!" message: string delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
     
     [newAlert show];
 }
-
-
-
-
-
-
 
 
 

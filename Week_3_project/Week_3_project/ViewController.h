@@ -13,10 +13,10 @@
 
 -(int)add:(int)first second:(int)second;
 
--(BOOL)compare:(NSInteger *)firstNumber secondNumber:(NSInteger *)secondNumber;
+-(BOOL)compare:(NSInteger)firstNumber secondNumber:(NSInteger)secondNumber;
 
--(NSString*)append:(NSString*)firstString second:(NSString*)second;
+-(NSString*)append:(NSString *)firstString second:(NSString *)second;
 
--(void)displayAlertWithString:(NSString *)string secondString:(NSString *)secondString;
+-(void)displayAlertWithString:(NSString *)string;
 
 @end
