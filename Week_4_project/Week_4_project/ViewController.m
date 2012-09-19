@@ -19,19 +19,49 @@
 
     //<----------------------------------------- start of my code! ------------------------------------------------>
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/*
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(button != nil){
         
         button.frame = CGRectMake(10.0f, 10.0f, 100.0f, 50.0f);
         [button setTitle:@"Push me" forState:UIControlStateNormal];
-        [button setTitle:@"Pushed" forState:UIControlStateHighlighted];
+        
+        [button addTarget:self action:@selector(onClick) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:button];
     }
-    
+*/    
     
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
+
+
+
+/*
+-(void)onClick
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"You hit me!" message:@"You hit me!!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    
+    if (alertView != nil){
+        [alertView show];
+    }
+}
+*/
+
 
 - (void)viewDidUnload
 {
