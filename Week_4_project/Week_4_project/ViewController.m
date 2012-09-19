@@ -16,6 +16,19 @@
 
 - (void)viewDidLoad
 {
+
+    //<----------------------------------------- start of my code! ------------------------------------------------>
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if(button != nil){
+        
+        button.frame = CGRectMake(10.0f, 10.0f, 100.0f, 50.0f);
+        [button setTitle:@"Push me" forState:UIControlStateNormal];
+        [button setTitle:@"Pushed" forState:UIControlStateHighlighted];
+        [self.view addSubview:button];
+    }
+    
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
