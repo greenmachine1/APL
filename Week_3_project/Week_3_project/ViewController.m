@@ -94,9 +94,6 @@
 }
 
 
-
-
-
 // function used to append two strings together then return the results
 -(NSString*)append:(NSString*)firstString second:(NSString*)second
 {
@@ -111,9 +108,6 @@
     
     
 }
-
-
-
 
 
 // takes a string and displays it.

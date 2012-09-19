@@ -70,7 +70,7 @@
     
     if(summory != nil){
         summory.backgroundColor = [UIColor whiteColor];
-        summory.text = @"Summory";
+        summory.text = @"Summary";
         summory.textAlignment = UITextAlignmentCenter;
     }
     
