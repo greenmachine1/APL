@@ -9,10 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController{
-    
+    UITextField *userNameTextView;
 }
 
-//-(void)onClick;
+-(void)onClick;
 
 
 
