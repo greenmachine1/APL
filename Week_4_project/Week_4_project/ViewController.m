@@ -80,14 +80,10 @@
         NSLog(userText);
     }
     
+    // creates an alert view if the string is empty
     else{
-        NSLog(@"Do something else");
-    }
-    
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"You hit me!" message:@"You hit me!!" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    
-    if (alertView != nil){
-        [alertView show];
+        UIAlertView *emptyAlert = [[UIAlertView alloc] initWithTitle:@"Error!" message:@"Your username cannot be empty" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [emptyAlert show];
     }
 }
 
