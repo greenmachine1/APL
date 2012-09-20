@@ -119,9 +119,25 @@
     }
     
     if(button.tag == 1){
-        UIAlertView *dateTimeAlert = [[UIAlertView alloc] initWithTitle:@"Date" message:@"This will be populated" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         
+        // made this dateTimeAlert global
+        dateTimeAlert = [[UIAlertView alloc] initWithTitle:@"Date" message:@"" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        
+        // if the dateTimeAlert uiAlertView exists then do this
         if(dateTimeAlert != nil){
+            
+            // getting the date and time and putting it into this object
+            NSDate *newDate = [NSDate date];
+            
+            // formatting the date and time
+            NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+            if(dateFormatter != nil){
+                
+                [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+                
+                NSMutableString *newString = [[NSMutableString alloc] initWithString:[dateFormatter stringFromDate:newDate]];
+                dateTimeAlert.message = newString;
+            }
             [dateTimeAlert show];
         }
         

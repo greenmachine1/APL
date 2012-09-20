@@ -11,6 +11,7 @@
 @interface ViewController : UIViewController{
     UITextField *userNameTextView;
     UILabel *centerTextField;
+    UIAlertView *dateTimeAlert;
 }
 
 -(void)onClick:(UIButton *)button;
