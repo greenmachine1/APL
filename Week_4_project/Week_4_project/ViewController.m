@@ -133,9 +133,14 @@
             NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
             if(dateFormatter != nil){
                 
-                [dateFormatter setDateStyle:NSDateFormatterShortStyle];
+                // this sets the actual format of the output of time and date
+                // month, day, year then hour, minutes, am or pm, then what time zone
+                [dateFormatter setDateFormat:@" MMM.dd.yyyy hh:mm a zzzz"];
                 
+                // puts the date formatted into a new string
                 NSMutableString *newString = [[NSMutableString alloc] initWithString:[dateFormatter stringFromDate:newDate]];
+                
+                // then gets passed into the message portion of the dateTimeAlert
                 dateTimeAlert.message = newString;
             }
             [dateTimeAlert show];
