@@ -44,7 +44,14 @@
         [self.view addSubview:loginButton];
     }
     
-    
+    UILabel *centerTextField = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 100.0f, 300.0f, 50.0f)];
+    if (centerTextField != nil){
+        centerTextField.backgroundColor = [UIColor lightGrayColor];
+         centerTextField.textColor = [UIColor blueColor];
+        centerTextField.text = @"Username";
+        centerTextField.textAlignment = UITextAlignmentCenter;
+    }
+    [self.view addSubview:centerTextField];
     [self.view addSubview:userNameLabel];
     
 /*
