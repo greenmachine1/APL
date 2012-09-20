@@ -37,7 +37,12 @@
     
     }
     
-    
+    // making my login button
+    UIButton *loginButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    if (loginButton != nil){
+        loginButton.frame = CGRectMake(260.0f, 50.0f, 50.0f, 20.0f);
+        [self.view addSubview:loginButton];
+    }
     
     
     [self.view addSubview:userNameLabel];
