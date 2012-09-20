@@ -10,9 +10,10 @@
 
 @interface ViewController : UIViewController{
     UITextField *userNameTextView;
+    UILabel *centerTextField;
 }
 
--(void)onClick;
+-(void)onClick:(UIButton *)button;
 
 
 
