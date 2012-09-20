@@ -19,19 +19,28 @@
 
     //<----------------------------------------- start of my code! ------------------------------------------------>
     
+    // assigning my background color to be white
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    // making a label with the username input
+    UILabel *userNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(10.0f, 10.0f, 100.0f, 20.0f)];
+    if (userNameLabel != nil){
+        userNameLabel.text = @"Username";
+        userNameLabel.textAlignment = UITextAlignmentLeft;
+    }
+    
+    // making a user input box
+    UITextField *userNameTextView = [[UITextField alloc] initWithFrame:CGRectMake(120.0f, 10.0f, 190.0f, 30.0f)];
+    if (userNameTextView != nil){
+        userNameTextView.borderStyle = UITextBorderStyleBezel;
+        [self.view addSubview:userNameTextView];
+    
+    }
     
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    [self.view addSubview:userNameLabel];
     
 /*
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
