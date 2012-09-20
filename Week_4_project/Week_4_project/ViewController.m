@@ -74,6 +74,7 @@
     UIButton *showDateButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     if(showDateButton != nil){
         
+        // making the frame of the showDate button
         showDateButton.frame = CGRectMake(90.0f, 200.0f, 120.0f, 40.0f);
         
         // assigning my showDateButton the tag of 1
@@ -87,11 +88,29 @@
         [self.view addSubview:showDateButton];
     }
     
+    
+    // ------------------------------------ end of middle section --------------------------------------------------->
+    // ------------------------------------ start of end section ---------------------------------------------------->
+    
+    UIButton *showInfoButton = [UIButton buttonWithType:UIButtonTypeInfoDark];
+    if(showInfoButton != nil){
+        
+        // making the frame of the info button
+        showInfoButton.frame = CGRectMake(20.0f, 300.0f, 25.0f, 25.0f);
+        
+        // setting the tag to 2
+        showInfoButton.tag = 2;
+        
+        [showInfoButton addTarget:self action:@selector(onClick:) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:showInfoButton];
+        
+    }
+
+    
+    // ----------------------------------------- end of end section ------------------------------------------------>
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
-
 
 
 // my onclick event function
@@ -99,6 +118,7 @@
 {
     
     if(button.tag == 0){
+        
         // making the onclick event register the user input
         NSString *userText = [userNameTextView text];
         if (userText.length != 0){
@@ -146,6 +166,19 @@
             [dateTimeAlert show];
         }
         
+    }
+    
+    if(button.tag == 2){
+        
+        // make a label that when clicked on the info button pops up with this label
+        UILabel *infoLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0f, 320.0f, 250.0f, 50.0f)];
+        if (infoLabel != nil){
+            infoLabel.text = @"This application was created by : Cory Green";
+            infoLabel.textAlignment = UITextAlignmentLeft;
+            infoLabel.textColor = [UIColor blueColor];
+            infoLabel.numberOfLines = 5;
+            [self.view addSubview:infoLabel];
+        }
     }
 }
 
